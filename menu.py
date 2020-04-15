@@ -3,6 +3,7 @@ import sqlite3
 import tkinter.messagebox
 from patient_reg import patient_reg
 from employee_reg import employee_reg
+from patient_bill import  patient_bill
 
 def menu():
     global root1, button1, button2, button3, button4, button5, button6
@@ -15,7 +16,7 @@ def menu():
     button2 = tkinter.Button(root1, text='ROOM-N:', bg='light green', fg='black')
     button3 = tkinter.Button(root1, text='EMPLOYEE REGISTRATION:', bg='light blue', fg='black', command=employee_reg)
     button4 = tkinter.Button(root1, text='RESERVATIONS:', bg='light green', fg='black')
-    button5 = tkinter.Button(root1, text='PATIENT ACCOUNT:', bg='light blue', fg='black')
+    button5 = tkinter.Button(root1, text='PATIENT BILLING:', bg='light blue', fg='black', command=patient_bill)
     button6 = tkinter.Button(root1, text='EXIT:', bg='light green', fg='black')
 
     m.place(x=75, y=5)
