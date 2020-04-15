@@ -1,12 +1,13 @@
 import tkinter
-import  window2
+from menu import menu
+
 
 def get_login():
     global userbox, passbox, error
     usertest = userbox.get()
     passwordtest = passbox.get()
     if (usertest == 'master' and passwordtest == 'master'):
-        window2.menu()
+        menu()
     else:
         error = tkinter.Label(bottomframe, text='PLEASE ENTER A VALID USERNAME AND PASSWORD!', fg='red', font='bold')
         error.pack()
