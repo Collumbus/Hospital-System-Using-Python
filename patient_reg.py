@@ -1,6 +1,11 @@
 import tkinter
+import menu
+from patient_ude import*
+rootP = None
 
 def patient_reg():
+    global rootP, root1
+    menu.root1.destroy()
     rootP = tkinter.Tk()
     rootP.geometry('340x460')
     rootP.title('PATIENT REGISTRATION FORM:')
@@ -37,6 +42,13 @@ def patient_reg():
     address = tkinter.Label(rootP, text='ADDRESS:', font='arial 8 bold', fg='blue')
     patient_address = tkinter.Entry(rootP, width=50)
 
+    back = tkinter.Button(rootP, text='Back', fg='blue', font='arial 8 bold', bg='orange')
+    search = tkinter.Button(rootP, text='Search', fg='blue', font='arial 8 bold', bg='darkorange', command=patient_search)
+    delete = tkinter.Button(rootP, text='Delete', fg='blue', font='arial 8 bold', bg='sienna', command=patient_delete)
+    update = tkinter.Button(rootP, text='Update', fg='blue', font='arial 8 bold', bg='darkmagenta', command=patient_update)
+    submit = tkinter.Button(rootP, text='Submit', fg='blue', font='arial 8 bold', bg='darkcyan')
+
+
     head.pack()
     id.pack()
     patient_id.pack()
@@ -58,5 +70,11 @@ def patient_reg():
     patient_ct.pack()
     address.pack()
     patient_address.pack()
+
+    submit.pack()
+    back.pack(side=tkinter.LEFT)
+    update.pack(side=tkinter.LEFT)
+    delete.pack(side=tkinter.LEFT)
+    search.pack(side=tkinter.LEFT)
 
     rootP.mainloop()

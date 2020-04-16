@@ -7,6 +7,8 @@ from patient_bill import  patient_bill
 from room_finder import room_finder
 from reservation import reservation
 
+root1 = None
+
 def menu():
     global root1, button1, button2, button3, button4, button5, button6
 
