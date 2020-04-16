@@ -22,7 +22,7 @@ def entry():
     bottomframe = tkinter.Frame(root)
     bottomframe.pack()
 
-    heading = tkinter.Label(topframe, width=45, text='Hospital System', bg='#135823', fg='grey', font='Times 16 bold ' 'italic')
+    head = tkinter.Label(topframe, width=45, text='Hospital System', bg='#135823', fg='grey', font='Times 16 bold ' 'italic')
 
     username = tkinter.Label(topframe, text='User:')
     userbox = tkinter.Entry(topframe)
@@ -37,7 +37,7 @@ def entry():
     labelimg = tkinter.Label(image=image, height='380', width='300')
     labelimg.pack()
 
-    heading.pack()
+    head.pack()
     username.pack()
     userbox.pack()
     password.pack()

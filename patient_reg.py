@@ -5,7 +5,7 @@ def patient_reg():
     rootP.geometry('340x460')
     rootP.title('PATIENT REGISTRATION FORM:')
 
-    regform = tkinter.Label(rootP, text='PATIENT REGISTRATION FORM:', font='arial 16 bold')
+    head = tkinter.Label(rootP, text='PATIENT REGISTRATION FORM:', font='arial 16 bold')
 
     id = tkinter.Label(rootP, text='PATIENT ID:', font='arial 8 bold', fg='blue')
     patient_id = tkinter.Entry(rootP, width=12)
@@ -37,7 +37,7 @@ def patient_reg():
     address = tkinter.Label(rootP, text='ADDRESS:', font='arial 8 bold', fg='blue')
     patient_address = tkinter.Entry(rootP, width=50)
 
-    regform.pack()
+    head.pack()
     id.pack()
     patient_id.pack()
     name.pack()

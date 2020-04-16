@@ -4,6 +4,7 @@ import tkinter.messagebox
 from patient_reg import patient_reg
 from employee_reg import employee_reg
 from patient_bill import  patient_bill
+from room_finder import room_finder
 
 def menu():
     global root1, button1, button2, button3, button4, button5, button6
@@ -11,15 +12,15 @@ def menu():
     root1 = tkinter.Tk()
     root1.geometry('280x350')
     root1.title('Hospital System : MENU :')
-    m = tkinter.Label(root1, text='MENU', font='Times 16 bold ' 'italic', fg='grey')
+    head = tkinter.Label(root1, text='MENU', font='Times 16 bold ' 'italic', fg='grey')
     button1 = tkinter.Button(root1, text='REGISTER PACIENT:', bg='light blue', fg='black', command=patient_reg)
-    button2 = tkinter.Button(root1, text='ROOM-N:', bg='light green', fg='black')
+    button2 = tkinter.Button(root1, text='FIND ROOM:', bg='light green', fg='black', command=room_finder)
     button3 = tkinter.Button(root1, text='EMPLOYEE REGISTRATION:', bg='light blue', fg='black', command=employee_reg)
     button4 = tkinter.Button(root1, text='RESERVATIONS:', bg='light green', fg='black')
     button5 = tkinter.Button(root1, text='PATIENT BILLING:', bg='light blue', fg='black', command=patient_bill)
     button6 = tkinter.Button(root1, text='EXIT:', bg='light green', fg='black')
 
-    m.place(x=75, y=5)
+    head.place(x=75, y=5)
     button1.pack(side=tkinter.TOP)
     button1.place(x=80, y=50)
 

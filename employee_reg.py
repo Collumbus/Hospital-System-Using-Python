@@ -7,8 +7,8 @@ def employee_reg():
 
     var = tkinter.StringVar(master=rootE)
 
-    H = tkinter.Label(rootE, text='REGISTER EMPLOYEES:', fg='grey', font='arial 10 bold')
-    H.place(x=50, y=20)
+    head = tkinter.Label(rootE, text='REGISTER EMPLOYEES:', fg='grey', font='arial 10 bold')
+    head.place(x=50, y=20)
 
     l1 = tkinter.Label(rootE, text='EMPLOYEES ID:', fg='green', font='arial 8 bold')
     l1.place(x=50, y=50)
